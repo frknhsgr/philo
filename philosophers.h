@@ -6,7 +6,7 @@
 /*   By: fhosgor <fhosgor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 13:37:49 by fhosgor           #+#    #+#             */
-/*   Updated: 2024/07/10 15:37:04 by fhosgor          ###   ########.fr       */
+/*   Updated: 2024/10/07 16:27:32 by fhosgor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,7 @@ typedef struct s_philosopher
 typedef struct s_program
 {
 	pthread_t		*threads;
-	pthread_t		investigator;
 	pthread_mutex_t	*forks;
-	pthread_mutex_t	eating;
 	pthread_mutex_t	exit;
 	t_philosopher	*philosophers;
 	int				philo_count;
@@ -49,7 +47,7 @@ typedef struct s_program
 
 int				ft_strcmp(char *s1, char *s2);
 int				ft_atoi(char *str);
-void			argument_checker(char **av);
+int				argument_checker(char **av);
 long long		get_current_time(void);
 int				ft_timer(long long finish, t_philosopher *philo);
 void			ft_init_mutex(t_program *p);

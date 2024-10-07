@@ -6,7 +6,7 @@
 /*   By: fhosgor <fhosgor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/01 11:56:20 by fhosgor           #+#    #+#             */
-/*   Updated: 2024/07/10 15:36:30 by fhosgor          ###   ########.fr       */
+/*   Updated: 2024/10/07 16:25:47 by fhosgor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ int	ft_atoi(char *str)
 	return (num * sign);
 }
 
-void	argument_checker(char **av)
+int	argument_checker(char **av)
 {
 	int	i;
 
@@ -64,10 +64,11 @@ void	argument_checker(char **av)
 		if (ft_atoi(av[i]) <= 0)
 		{
 			printf("%d. argument is worng!", i);
-			exit (1);
+			return (0);
 		}
 		i++;
 	}
+	return (1);
 }
 
 long long	get_current_time(void)

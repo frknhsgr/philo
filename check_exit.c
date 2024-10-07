@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_print.c                                      :+:      :+:    :+:   */
+/*   check_exit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fhosgor <fhosgor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 12:56:30 by fhosgor           #+#    #+#             */
-/*   Updated: 2024/07/10 15:36:24 by fhosgor          ###   ########.fr       */
+/*   Updated: 2024/10/07 16:27:19 by fhosgor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,6 @@ int	ft_close(t_program *p)
 		pthread_mutex_destroy(&p->forks[i]);
 		i++;
 	}
-	pthread_mutex_destroy(&p->eating);
 	pthread_mutex_destroy(&p->exit);
 	free(p->threads);
 	free(p->forks);

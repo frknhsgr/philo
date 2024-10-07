@@ -6,7 +6,7 @@
 /*   By: fhosgor <fhosgor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 13:36:13 by fhosgor           #+#    #+#             */
-/*   Updated: 2024/07/11 16:21:06 by fhosgor          ###   ########.fr       */
+/*   Updated: 2024/10/07 16:24:30 by fhosgor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ int	main(int ac, char **av)
 		printf("Wrong Argument Count!");
 		return (0);
 	}
-	argument_checker(av);
+	if (!argument_checker(av))
+		return (0);
 	p = ft_init(ac, av);
 	if (!p)
 		return (0);

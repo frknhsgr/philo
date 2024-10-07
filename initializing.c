@@ -6,7 +6,7 @@
 /*   By: fhosgor <fhosgor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 16:37:53 by fhosgor           #+#    #+#             */
-/*   Updated: 2024/07/09 16:04:34 by fhosgor          ###   ########.fr       */
+/*   Updated: 2024/10/07 16:24:48 by fhosgor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ t_program	*ft_init(int ac, char **av)
 	if (ft_atoi(av[1]) > 200)
 	{
 		printf("Invalid philosopher count!\n");
-		exit(1);
+		return (NULL);
 	}
 	p = (t_program *)malloc(sizeof(t_program));
 	if (!p)
